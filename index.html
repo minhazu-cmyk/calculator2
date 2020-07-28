@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="main-section">
+        <div class="calculator ">
+            <h3 class="heading">calculator</h3>
+        
+       <div id="screen"> 
+            <input type="text" value="0"   id="screen-input"  disabled>
+         </div> 
+        <div id="button">
+            <button  class="switch btn btn-primary" id="btn1" onclick="buttonClick('1')">1</button>
+            <button  class="switch btn btn-primary" id="btn1" onclick="buttonClick('2')">2</button>
+            <button  class="switch btn btn-primary" id="btn1" onclick="buttonClick('3')">3</button>
+            <button  class="switch btn btn-primary" id="btn1" onclick="buttonClick('+')">+</button>
+            <button  class="switch btn btn-primary" id="btn1" onclick="buttonClick('4')">4</button>
+            <button  class="switch btn btn-primary" id="btn1" onclick="buttonClick('5')">5</button>
+            <button  class="switch btn btn-primary" id="btn1" onclick="buttonClick('6')">6</button>
+            <button  class="switch btn btn-primary" id="btn1" onclick="buttonClick('-')">-</button>
+            <button  class="switch btn btn-primary" id="btn1" onclick="buttonClick('7')">7</button>
+            <button  class="switch btn btn-primary" id="btn1" onclick="buttonClick('8')">8</button>
+            <button  class="switch btn btn-primary" id="btn1" onclick="buttonClick('9')">9</button>
+            <button  class="switch btn btn-primary" id="btn1" onclick="buttonClick('')">CA</button>
+            <button  class="switch btn btn-primary" id="btn1" onclick="buttonClick('.')">.</button>
+            <button  class="switch btn btn-primary" id="btn1" onclick="buttonClick('/')">/</button>
+            <button  class="switch btn btn-primary" id="btn1" onclick="buttonClick('*')">*</button>
+            <button  class="switch btn btn-primary " id="btn1" onclick="equalTo()">=</button>
+           
+     
+            
+           
+
+     </div>
+    </div>
+
+    <script>
+  
+
+  document.getElementById('screen-input').value = '';
+function buttonClick(num){
+   let screen = document.getElementById('screen-input');
+   screen.value += num;
+    if(num == ''){
+        screen.value = num;
+    }
+}
+function equalTo (){
+    let screen = document.getElementById('screen-input');
+    screen.value = eval(screen.value);
+}
+    
+
+    </script>
+    </section>
+    
+</body>
+</html>
